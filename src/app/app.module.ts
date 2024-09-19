@@ -1,32 +1,29 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GetCarByIdComponent } from './get-car-by-id/get-car-by-id.component';
 import { DeleteCarComponent } from './delete-car/delete-car.component';
+import { GetCarByIdComponent } from './get-car-by-id/get-car-by-id.component';
 import { GetAllCarsComponent } from './get-all-cars/get-all-cars.component';
 import { TopNCarsComponent } from './top-n-cars/top-n-cars.component';
-import { CarService } from './car.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GetCarByIdComponent,
     DeleteCarComponent,
+    GetCarByIdComponent,
     GetAllCarsComponent,
-    TopNCarsComponent
+    TopNCarsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    HttpClientModule,
+    FormsModule // Ensure FormsModule is imported for two-way binding
   ],
-  providers: [
-    provideClientHydration(),
-    CarService
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

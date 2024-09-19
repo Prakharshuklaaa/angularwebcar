@@ -6,15 +6,15 @@ import { GetAllCarsComponent } from './get-all-cars/get-all-cars.component';
 import { TopNCarsComponent } from './top-n-cars/top-n-cars.component';
 
 const routes: Routes = [
-  {path: 'get-car',component:GetCarByIdComponent},
-  {path:'delete-car',component:DeleteCarComponent},
-  {path: 'all-cars',component:GetAllCarsComponent},
-  {path: 'top-n-cars',component:TopNCarsComponent},
-  {path:"",redirectTo:'get-car',pathMatch:'full'}
+  { path: 'get-car', component: GetCarByIdComponent },
+  { path: 'delete-car', component: DeleteCarComponent },
+  { path: 'all-cars', component: GetAllCarsComponent },
+  { path: 'top-n-cars', component: TopNCarsComponent },
+  { path: '', redirectTo: 'get-car', pathMatch: 'full' }, // default route
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
