@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <h3>Get Car by ID</h3>
+    <form (ngSubmit)="getCarById()">
+      <div class="form-group">
+        <label for="carId">Car ID:</label>
+        <input type="number" class="form-control" id="carId" [(ngModel)]="carId" name="carId" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Get Car</button>
+    </form>
+  
+    <div *ngIf="car">
+      <h4>Car Details:</h4>
+      <p>Name: {{ car.name }}</p>
+      <p>Year: {{ car.year }}</p>
+      <p>Price: {{ car.sellingPrice }}</p>
+    </div>
+  </div>

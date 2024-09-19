@@ -1,0 +1,10 @@
+<div class="container mt-5">
+    <h3>Delete Car by ID</h3>
+    <form (ngSubmit)="deleteCar()">
+      <div class="form-group">
+        <label for="carId">Car ID:</label>
+        <input type="number" class="form-control" id="carId" [(ngModel)]="carId" name="carId" required>
+      </div>
+      <button type="submit" class="btn btn-danger">Delete Car</button>
+    </form>
+  </div>
