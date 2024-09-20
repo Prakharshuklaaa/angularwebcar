@@ -8,6 +8,7 @@ import { GetAllCarsComponent } from './get-all-cars/get-all-cars.component';
 import { TopNCarsComponent } from './top-n-cars/top-n-cars.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     GetCarByIdComponent,
     GetAllCarsComponent,
     TopNCarsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

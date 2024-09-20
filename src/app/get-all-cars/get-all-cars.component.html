@@ -1,1 +1,32 @@
-<p>get-all-cars works!</p>
+<!-- get-all-cars.component.html -->
+<div class="container mt-5">
+    <h2>All Cars</h2>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Car Name</th>
+          <th>Selling Price</th>
+          <th>Year</th>
+          <th>KM Driven</th>
+          <th>Fuel Type</th>
+          <th>Seller Type</th>
+          <th>Transmission</th>
+          <th>Owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of cars">
+          <td>{{ car.carId}}</td>
+          <td>{{ car.carName}}</td>
+          <td>{{ car.sellingPrice }}</td>
+          <td>{{ car.year }}</td>
+          <td>{{ car.kmDriven }}</td>
+          <td>{{ car.fuel}}</td>
+          <td>{{  car.sellerType }}</td>
+          <td>{{  car.transmission }}</td>
+          <td>{{ car.owner}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
